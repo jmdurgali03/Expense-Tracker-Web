@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B794F4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E9D8FD"/>
+      <stop offset="100%" stop-color="#C4B5FD"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:700 72px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#111827}
+      .subtitle{font:500 34px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#6B7280}
+      .label{font:600 36px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#111827}
+      .tick{font:600 32px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#111827}
+      .month{font:700 34px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#111827}
+      .tooltipTitle{font:700 32px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#111827}
+      .tooltipText{font:500 28px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#374151}
+      .tooltipVal{font:700 28px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#6D28D9}
+      .btn{font:800 36px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill:#7C3AED}
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1600" height="1000" rx="40" fill="#F9FAFB"/>
+
+  <!-- Card header text -->
+  <text x="120" y="140" class="title">All Transactions</text>
+  <text x="120" y="200" class="subtitle">2nd Jan to 21th Dec</text>
+
+  <!-- Main card -->
+  <g filter="url(#shadow)">
+    <rect x="860" y="120" width="620" height="120" rx="28" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="3"/>
+    <rect x="104" y="260" width="1392" height="620" rx="32" fill="#FFFFFF"/>
+  </g>
+
+  <!-- View More button -->
+  <g transform="translate(1180,280)">
+    <rect width="280" height="72" rx="36" fill="#EFE9FF" stroke="#D8B4FE" stroke-width="2"/>
+    <text x="76" y="48" class="btn">View More</text>
+  </g>
+
+  <!-- Y-axis ticks -->
+  <g transform="translate(140,310)">
+    <text class="tick" x="0" y="540">0</text>
+    <text class="tick" x="0" y="480">50</text>
+    <text class="tick" x="0" y="360">120</text>
+    <text class="tick" x="0" y="300">160</text>
+    <text class="tick" x="0" y="180">230</text>
+    <text class="tick" x="0" y="60">400</text>
+  </g>
+
+  <!-- Bars group -->
+  <g transform="translate(260,320)">
+    <!-- Helper: functionally just fixed coordinates -->
+    <!-- Jan -->
+    <g transform="translate(0,0)">
+      <rect x="0" y="360" width="120" height="180" rx="16" fill="url(#bar)"/>
+      <rect x="0" y="300" width="120" height="60" rx="16" fill="url(#cap)"/>
+      <text x="22" y="612" class="month">Jan</text>
+    </g>
+    <!-- Feb -->
+    <g transform="translate(220,0)">
+      <rect x="0" y="300" width="120" height="240" rx="16" fill="url(#bar)"/>
+      <rect x="0" y="240" width="120" height="60" rx="16" fill="url(#cap)"/>
+      <text x="26" y="612" class="month">Feb</text>
+    </g>
+    <!-- Mar -->
+    <g transform="translate(440,0)">
+      <rect x="0" y="300" width="120" height="240" rx="16" fill="url(#bar)"/>
+      <rect x="0" y="120" width="120" height="180" rx="16" fill="url(#cap)"/>
+      <text x="12" y="612" class="month">Mar</text>
+    </g>
+    <!-- Apr -->
+    <g transform="translate(660,0)">
+      <rect x="0" y="300" width="120" height="240" rx="16" fill="url(#bar)"/>
+      <rect x="0" y="210" width="120" height="90" rx="16" fill="url(#cap)"/>
+      <text x="20" y="612" class="month">Apr</text>
+    </g>
+    <!-- May -->
+    <g transform="translate(880,0)">
+      <rect x="0" y="420" width="120" height="120" rx="16" fill="url(#bar)"/>
+      <rect x="0" y="360" width="120" height="60" rx="16" fill="url(#cap)"/>
+      <text x="10" y="612" class="month">May</text>
+    </g>
+    <!-- Jun -->
+    <g transform="translate(1100,0)">
+      <rect x="0" y="300" width="120" height="240" rx="16" fill="url(#bar)"/>
+      <rect x="0" y="180" width="120" height="120" rx="16" fill="url(#cap)"/>
+      <text x="18" y="612" class="month">Jun</text>
+    </g>
+  </g>
+
+  <!-- Jul bar (slightly outside to match layout) -->
+  <g transform="translate(1520,320)">
+    <g transform="translate(-160,0)">
+      <rect x="0" y="300" width="120" height="240" rx="16" fill="url(#bar)"/>
+      <rect x="0" y="120" width="120" height="180" rx="16" fill="url(#cap)"/>
+      <text x="26" y="612" class="month">Jul</text>
+    </g>
+  </g>
+
+  <!-- Tooltip over April -->
+  <g transform="translate(980,420)">
+    <path d="M80,126 L100,146 L120,126" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="3"/>
+    <rect x="0" y="0" width="460" height="130" rx="20" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="3"/>
+    <text x="26" y="40" class="tooltipTitle">April</text>
+    <text x="26" y="78" class="tooltipText">Income</text>
+    <text x="130" y="78" class="tooltipVal">$5400</text>
+    <text x="26" y="112" class="tooltipText">Expense</text>
+    <text x="130" y="112" class="tooltipVal">$5400</text>
+  </g>
+</svg>
