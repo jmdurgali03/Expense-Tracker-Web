@@ -6,7 +6,7 @@ import Input from '../../components/inputs/Input';
 import { validateEmail } from '../../utils/helper';
 
 import { API_PATHS } from '../../utils/apiPaths';
-import { UserContext } from '../../context/userContext';
+import { UserContext } from '../../context';
 import { axiosInstance } from '../../utils/axiosInstance';
 
 
