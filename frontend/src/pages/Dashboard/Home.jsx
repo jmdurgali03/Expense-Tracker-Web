@@ -7,8 +7,8 @@ import DashboardLayout from '../../components/layouts/DashboardLayout'
 import InfoCard from '../../components/cards/InfoCard';
 import RecentTransactions from '../../components/Dashboard/RecentTransactions';
 import FinanceOverView from '../../components/Dashboard/FinanceOverView';
+import Last30DaysExpenses from '../../components/Dashboard/Last30DaysExpenses';
 import ExpenseTransaction from '../../components/Dashboard/ExpenseTransaction';
-import Last30Daysexpenses from '../../components/Dashboard/Last30Daysexpenses';
 import RecentIncomeWithChart from '../../components/Dashboard/RecentIncomeWithChart';
 import RecentIncome from '../../components/Dashboard/RecentIncome';
 
@@ -111,7 +111,7 @@ const Home = () => {
                         onSeeMore={() => navigate('/expense')}
                     />
 
-                    <Last30Daysexpenses
+                    <Last30DaysExpenses
                         data={dashboardData?.last30DaysExpenses?.transactions || []}
                     />
 
